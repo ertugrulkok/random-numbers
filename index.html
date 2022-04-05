@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="title"><h1>RANDOM NUMBER GERENATOR WITH RANGE</h1></div>
+    <div id="container">
+        <div id="box">
+            <div class="input"><label for="min">min</label><input type="number" id='min'></div>
+            <div class="input"><label for="max">max</label><input type="number" id="max"></div>
+            <div id="btn"><input type="button" value="push to generate" onclick="generate();"></div>
+            <div id="output">= 0</div>
+        </div>
+    </div>
+
+    
+
+    <script>
+    
+       
+    
+
+     function generate(){
+    
+    var min = document.getElementById('min').value;
+    var max = document.getElementById('max').value;
+    var output = document.getElementById("output");
+
+    min= parseFloat(min)
+    max= parseFloat(max)
+          
+    var randomNumber = Math.floor(Math.random()*(max-min+1)  +min);
+  
+     
+     output.innerHTML = randomNumber;
+     
+    }
+  
+ 
+
+     </script>
+    
+</body>
+</html>
